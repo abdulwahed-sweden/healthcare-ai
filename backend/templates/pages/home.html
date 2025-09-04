@@ -1,29 +1,27 @@
-{% extends 'base.html' %}
-
-{% block title %}{{ title }}{% endblock %}
+{% extends "base.html" %}
+{% block title %}Healthcare AI{% endblock %}
 
 {% block content %}
-
-<div class="container mt-5">
+<div class="container py-5">
   <div class="row justify-content-center">
-    <div class="col-md-8">
-      <div class="card shadow-sm">
-        <div class="card-body">
-          <h3 class="card-title mb-4 text-center">AI Agent (DeepSeek)</h3>
-          <form method="post" class="mb-3">
+    <div class="col-md-7 col-lg-6">
+      <div class="card border-0 shadow-sm">
+        <div class="card-body p-4">
+          <h5 class="mb-3 text-center">Healthcare AI Assistant</h5>
+
+          <form method="post" id="ai-form">
             {% csrf_token %}
-            <div class="form-group">
-              <textarea class="form-control" name="user_text" rows="4" placeholder="Enter medical text..."></textarea>
-            </div>
-            <div class="text-center mt-3">
-              <button type="submit" class="btn btn-primary">Send</button>
+            <textarea class="form-control mb-3" name="user_text" rows="4" placeholder="Paste medical text..."></textarea>
+            <div class="d-grid">
+              <button id="submit-btn" type="submit" class="btn btn-primary">
+                Analyze
+              </button>
             </div>
           </form>
 
           {% if result %}
-            <div class="alert alert-success mt-4">
-              <strong>Response:</strong>
-              <p class="mb-0">{{ result }}</p>
+            <div class="alert alert-success mt-3">
+              <strong>Response:</strong> {{ result }}
             </div>
           {% endif %}
         </div>
@@ -31,5 +29,21 @@
     </div>
   </div>
 </div>
+{% endblock %}
 
+{% block extra_js %}
+<script>
+  // Minimal submit -> show spinner + disable
+  (function () {
+    const form = document.getElementById('ai-form');
+    const btn  = document.getElementById('submit-btn');
+    if (!form || !btn) return;
+    form.addEventListener('submit', function () {
+      btn.disabled = true;
+      btn.classList.remove('btn-primary');
+      btn.classList.add('btn-warning');
+      btn.innerHTML = '<i class="fi fi-spin fi-circle-spin me-2" role="status" aria-hidden="true"></i>Analyzing...';
+    });
+  })();
+</script>
 {% endblock %}
