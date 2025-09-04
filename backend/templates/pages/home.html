@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-lg-8 mx-auto text-center">
+        <h1 class="display-4 mb-4">{{ welcome_message }}</h1>
+        <p class="lead">Revolutionizing healthcare through artificial intelligence and machine learning solutions.</p>
+        
+        <div class="row mt-5">
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <i class="fas fa-brain fa-3x text-primary mb-3"></i>
+                        <h3>AI Diagnosis</h3>
+                        <p>Advanced algorithms for accurate medical diagnosis and prediction.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <i class="fas fa-chart-line fa-3x text-success mb-3"></i>
+                        <h3>Health Analytics</h3>
+                        <p>Comprehensive data analysis for better patient outcomes.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <i class="fas fa-user-md fa-3x text-info mb-3"></i>
+                        <h3>Virtual Assistance</h3>
+                        <p>24/7 AI-powered healthcare assistance and support.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <a href="{% url 'about' %}" class="btn btn-primary btn-lg mt-4">Learn More About Us</a>
+    </div>
+</div>
+{% endblock %}
