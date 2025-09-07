@@ -16,7 +16,7 @@ def home(request):
                 {"role": "user", "content": input_text},
             ],
             stream=False,
-            max_tokens=30  # عشان يكون الرد قصير
+            max_tokens=60  # عشان يكون الرد قصير
         )
 
         result = response.choices[0].message.content

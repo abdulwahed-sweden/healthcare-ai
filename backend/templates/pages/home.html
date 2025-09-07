@@ -29,6 +29,118 @@
     </div>
   </div>
 </div>
+
+
+
+
+<ul class="sow-timeline">
+
+	<li>
+		<h3 class="mb-5">
+			Demo Timeline
+		</h3>
+	</li>
+
+	<li class="pb-5">
+
+		<h4 class="sow-timeline-title fw-light mb-0 position-relative d-flex align-items-center">
+			Simple is more?
+		</h4>
+		<small class="text-muted">Tue Nov 10, 2022</small>
+
+		<div class="mt-4">
+			<p>
+				No, is not! Two different words, two different meanings!
+				At least, we invented words to comunicate and messed up our brain - we can't think without words!
+				Is there thinking without words, or is there a complete perception without words?
+				Our brain is cought in a network of words, always describing in our mind what we do, what we see, etc!
+				Can such a brain be creative when is always running in the same old, same circle, same known defined by words?
+				What if our brain is fighting to be free of words, and might be the reason why our mind is flooded by words, conflicts, fragmentation?
+				Looks like a battle, isn't it? WHY?
+			</p>
+			<a href="#!" class="text-dashed">read more</a>
+		</div>
+
+
+	</li>
+
+	<li class="pb-5">
+
+		<h4 class="sow-timeline-title fw-light mb-0 position-relative d-flex align-items-center">
+			What is simple?
+		</h4>
+		<small class="text-muted">Tue Nov 10, 2022</small>
+
+		<div class="mt-4">
+			<ul>
+				<li>Simple is not more!</li>
+				<li>More is not simple!</li>
+				<li>Simple is simple and more is more!</li>
+				<li>Simple might be: I don't know what I don't know!</li>
+				<li>Simple is not: I know that I don't know what I don't know!</li>
+			</ul>
+		</div>
+
+	</li>
+
+	<li class="pb-5">
+
+		<h4 class="sow-timeline-title fw-light mb-0 position-relative d-flex align-items-center">
+			Bootstrap 5
+		</h4>
+		<small class="text-muted">Tue Nov 10, 2022</small>
+
+		<div class="mt-4">
+			<p class="mb-0">
+				<b>Of course!</b>
+			</p>
+		</div>
+
+	</li>
+
+</ul>
+
+
+
+<!--
+
+	data-href is the confirmation url and should contains
+	the backend required params, like in this example.
+
+	If confirmation URL is added to href, the plugin will remove it
+	and will automatically create data-href with it!
+	Reason: people should not be able to "open link in new tab"
+	skipping the confirmation window.
+
+-->
+<a href="#"
+	data-href="plugins-sow-ajax-confirm.html?action=delete&amp;item_id=1"
+	class="js-ajax-confirm btn btn-danger"
+
+	data-ajax-confirm-mode="ajax"
+	data-ajax-confirm-method="GET"
+
+	data-ajax-confirm-size="modal-md"
+	data-ajax-confirm-centered="false"
+
+	data-ajax-confirm-title="Please Confirm"
+	data-ajax-confirm-body="Please confirm now or later!"
+
+	data-ajax-confirm-btn-yes-class="btn-sm btn-success"
+	data-ajax-confirm-btn-yes-text="Confirm"
+	data-ajax-confirm-btn-yes-icon="fi fi-check"
+
+	data-ajax-confirm-btn-no-class="btn-sm btn-light"
+	data-ajax-confirm-btn-no-text="Cancel"
+	data-ajax-confirm-btn-no-icon="fi fi-close"
+
+	data-ajax-confirm-callback-function="">
+	Please confirm
+</a>
+
+
+
+
 {% endblock %}
 
 {% block extra_js %}
